@@ -9,7 +9,7 @@ This project created based on the requirements of the test task. The form's prim
 - Responsive design: the form adapts correctly to all devices.
 
 ## DEMO 
-    - [DEMO LINK](https://test-app-powercode.vercel.app/)
+    [DEMO LINK](https://test-app-powercode.vercel.app/)
 
 ## Key Requirements
 
