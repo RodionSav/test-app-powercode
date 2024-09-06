@@ -1,0 +1,71 @@
+@import "../styles/utils/typography";
+@import "./utils/variables";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 250px;
+  padding: 50px 58px;
+  border-radius: 8px;
+  background-color: $form-back-color;
+  box-sizing: content-box;
+
+  @include onPhone {
+    width: 100%;
+    margin-top: 21px;
+    padding: 41px 21px;
+    box-sizing: border-box;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: $input-back-color;
+    color: $input-text-color;
+    box-sizing: border-box;
+    font-family: "Gilroy", sans-serif;
+
+    &::placeholder {
+      font-family: "Gilroy", sans-serif;
+      color: $input-text-color;
+      font-size: 13px;
+      line-height: 24px;
+      opacity: 0.8;
+    }
+
+    &:focus,
+    &:hover,
+    &:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0px 1000px $input-back-color inset;
+      box-shadow: 0 0 0px 1000px $input-back-color inset;
+      -webkit-text-fill-color: $input-text-color;
+      transition: background-color 5000s ease-in-out 0s;
+    }
+  }
+
+  &__submit-button {
+    font-weight: 700;
+    background-color: $title-and-submit-button-color;
+    color: $white-color;
+    padding: 15px;
+    font-size: 15px;
+    line-height: 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $title-and-submit-button-color-hover;
+    }
+  }
+}

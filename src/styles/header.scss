@@ -1,0 +1,79 @@
+@import "../styles/utils/typography";
+
+.header {
+  position: relative;
+  z-index: 10;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1040px;
+  padding: 24px 56px;
+
+  @include onPhone {
+    padding: 28px 30px;
+  }
+
+  &__logo {
+    display: block;
+    width: 150px;
+
+    @include onPhone {
+      width: 101px;
+    }
+
+    &-container {
+      display: flex;
+      gap: 14px;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+
+    &-academy {
+      font-weight: 800;
+      font-size: 27px;
+    }
+  }
+
+  &__time {
+    display: flex;
+
+    @include onPhone {
+      gap: 6px;
+    }
+
+    @include onDesktop {
+      gap: 18px;
+    }
+
+    &__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 141px;
+      height: 40px;
+      border-radius: 8px;
+      background-color: $header-item-color;
+      gap: 6px;
+
+      @include onPhone {
+        width: 88px;
+        height: 24px;
+      }
+
+      &__title {
+        color: $white-color;
+        font-size: 14px;
+
+        @include onPhone {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+}

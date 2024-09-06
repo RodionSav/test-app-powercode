@@ -1,13 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miami</title>
-    <link rel="stylesheet" href="./styles/main.scss">
-    <script src="scripts/main.js" defer></script>
-  </head>
-  <body>
-    <h1>Landing Page</h1>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PowerCode academy</title>
+  <link rel="stylesheet" href="./styles/main.scss">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  <script src="scripts/main.js" defer></script>
+</head>
+
+<body class="page">
+  <div class="page__decoration page__decoration-first"></div>
+  <div class="page__decoration page__decoration-second"></div>
+  <header class="header">
+    <img src="images/logo-img.svg" class="header__logo" />
+    <div class="header__time">
+      <div class="header__time__item">
+        <img src="images/calendar.svg" />
+        <h3 class="header__time__item__title">
+          <span id="date"></span>
+        </h3>
+      </div>
+      <div class="header__time__item">
+        <img src="images/time-img.svg" />
+        <h3 class="header__time__item__title">
+          <span id="duration"></span>
+        </h3>
+      </div>
+    </div>
+
+  </header>
+  <main class="page__body">
+    <div class="page__content">
+      <div class="webinar-container">
+        <div class="webinar">
+          <span class="webinar__label">Вебинар</span>
+          <h1 class="webinar__title">FRONT-END</h1>
+          <div class="webinar__tagline-container">
+            <div class="webinar__tagline-decoration-container">
+              <p class="webinar__tagline-decoration">С НУЛЯ</p>
+            </div>
+            <p class="webinar__tagline">Легкий старт в IT профессии</p>
+          </div>
+          <p class="webinar__description">Узнайте какими <span class="webinar__description_second-color">навыками должен
+              обладать <br class="webinar__description__indentation"> frontend разработчик в 2022 году</span> и как
+            начать карьеру в востребованной профессии</p>
+        </div>
+        <div class="speaker-container speaker-container-desktop">
+          <div class="speaker">
+            <img src="images/avatar-img.png" />
+            <div>
+              <p class="speaker__name">Кирилл <span class="speaker__name_surname">Касатонов</span></p>
+              <p class="page__item__paragraph">6 лет коммерческого опыта с такими компаниями как <br> Mercedes-Benz и
+                другими
+                крупными корпорациями</p>
+            </div>
+          </div>
+          <div class="bonus">
+            <img src="images/present-img.png" />
+            <div>
+              <p class="bonus__title">Бонус за регистрацию</p>
+              <p class="page__item__paragraph">PDF-файл "5 преимуществ <br> профессии frontend разработчика"</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <form id="registration-form" class="form" action="t.me/chatfortesttask" >
+        <h3 class="registration__title">
+          Запишитесь <span class="registration__title-free">бесплатно</span> <br>
+          и получите подарок
+        </h3>
+        <div class="form__group">
+          <input type="text" id="name" name="name" class="form__input" placeholder="Ваше имя и фамилия" required>
+        </div>
+        <div class="form__group">
+          <input type="tel" id="phone" name="phone" class="form__input" placeholder="Ваш номер телефона" required>
+        </div>
+        <div class="form__group">
+          <input type="email" id="email" name="email" class="form__input" placeholder="Ваш email" required>
+        </div>
+        <button type="submit" class="form__submit-button">Записаться бесплатно</button>
+        <p class="registration__paragraph">
+          Нажимая на кнопку я соглашаюсь <br>
+          <span class="registration__paragraph_decoration">
+            с политикой конфидециальности
+          </span>
+        </p>
+      </form>
+      <div class="speaker-container speaker-container-phone">
+        <div class="bonus">
+          <img src="images/present-img.png" />
+          <div>
+            <p class="bonus__title">Бонус за регистрацию</p>
+            <p class="bonus__paragraph page__item__paragraph">PDF-файл "5 преимуществ профессии веб-дизайнера" </p>
+          </div>
+        </div>
+        <div class="speaker">
+          <img src="images/avatar-img.png" />
+          <div>
+            <p class="speaker__name">Кирилл <span class="speaker__name_surname">Касатонов</span></p>
+            <p class="page__item__paragraph">6 лет коммерческого опыта с такими компаниями как Mercedes-Benz и
+              другими
+              крупными корпорациями</p>
+          </div>
+        </div>
+      </div>
+      <div class="logo__item-container">
+        <div class="logo__item logo__item-first"></div>
+        <div class="logo__item logo__item-second"></div>
+        <div class="logo__item logo__item-third"></div>
+        <div class="logo__item logo__item-fourth"></div>
+        <div class="logo__item logo__item-fifth"></div>
+      </div>
+    </div>
+    <h3 class="page__title__background">front-end developer</h3>
+  </main>
+  <div class="page__decoration page__decoration-third"></div>
+</body>
+
 </html>

@@ -1,0 +1,79 @@
+@import '../styles/utils/typography';
+@import './utils/variables';
+
+.bonus {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 20px;
+
+  @include onPhone {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__icon {
+    width: 40px;
+    margin-right: 10px;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  &__text {
+    font-size: 14px;
+    text-align: left;
+  }
+}
+
+.speaker {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: 20px;
+
+  @include onPhone {
+    justify-content: center;
+  }
+
+  &-container {
+    &-phone {
+      padding-bottom: 60px;
+
+      @include onDesktop {
+        display: none;
+      }
+    }
+
+    &-desktop {
+      @include onPhone {
+        display: none;
+      }
+    }
+  }
+
+  &__photo {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  &__name {
+    display: inline;
+    font-size: 16px;
+    font-weight: 700;
+    color: $white-color;
+    text-transform: uppercase;
+
+    &_surname {
+      color: $surname-color;
+    }
+  }
+
+  &__description {
+    font-size: 14px;
+    color: $description-color;
+  }
+}

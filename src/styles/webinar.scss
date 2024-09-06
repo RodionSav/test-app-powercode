@@ -1,0 +1,144 @@
+@import "../styles/utils/typography";
+@import "./utils/variables";
+
+.webinar {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: start;
+
+  margin-bottom: 20px;
+
+  &-container {
+    max-width: 427px;
+  }
+
+  &__description {
+    font-weight: 500;
+    line-height: 26.64px;
+    font-size: 18px;
+
+    @include onPhone {
+      text-align: center;
+    }
+
+    &_second-color {
+      color: $white-color;
+    }
+
+    &__indentation {
+      @include onDesktop {
+        display: none;
+      }
+    }
+  }
+
+  &__label {
+    text-align: center;
+    width: 119px;
+    height: 32px;
+    font-size: 16px;
+    background-color: $surname-color;
+    color: $white-color;
+    border-radius: 5px;
+    display: inline-block;
+    box-sizing: border-box;
+    padding-top: 3px;
+    font-weight: bold;
+
+    @include onPhone {
+      display: flex;
+      gap: 5px;
+      margin: auto;
+      position: relative;
+      width: 89px;
+      height: 23px;
+      font-size: 12px;
+      padding-left: 12px;
+    }
+
+    &::before {
+      content: url("../images/earth-image.svg");
+      position: relative;
+      top: 4px;
+      right: 3px;
+      width: 17px;
+      height: 17px;
+
+      @include onPhone {
+        content: url("../images/earth-image.svg");
+        position: relative;
+        top: -1px;
+        right: 3px;
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 77px;
+    color: $title-and-submit-button-color;
+    margin-bottom: 10px;
+
+    @include onPhone {
+      margin: auto;
+      font-size: 53px;
+    }
+  }
+
+  &__tagline {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: $white-color;
+    margin-bottom: 20px;
+    margin-left: 16px;
+    white-space: nowrap;
+
+    @include onPhone {
+      margin: auto;
+      text-align: center;
+      margin-left: 10px;
+    }
+
+    &-container {
+      display: flex;
+      text-align: center;
+      align-items: center;
+
+      @include onPhone {
+        margin: auto;
+        margin-bottom: 17px;
+      }
+    }
+
+    &-decoration {
+      color: $white-color;
+      font-weight: bold;
+      border-radius: 5px;
+      font-size: 16px;
+      margin-right: 5px;
+      margin-left: 5px;
+      transform: rotate(5deg);
+      display: inline-block;
+
+      &-container {
+        background-color: $title-and-submit-button-color;
+        padding: 4px 4px;
+        border-radius: 5px;
+        transform: rotate(-5deg);
+        display: inline-block;
+        position: relative;
+      }
+    }
+  }
+
+  &__description {
+    font-size: 16px;
+    font-weight: bold;
+    color: $description-color;
+    margin-bottom: 20px;
+  }
+}

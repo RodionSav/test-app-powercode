@@ -1,0 +1,33 @@
+@import "../styles/utils/typography";
+@import "./utils/variables";
+
+.registration {
+  &__title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+
+    &-free {
+      color: $title-and-submit-button-color;
+    }
+  }
+
+  &__paragraph {
+    font-weight: 500;
+    line-height: 17.88px;
+    font-size: 12px;
+    text-align: center;
+    opacity: 0.5;
+
+    &_decoration {
+      &::before {
+        content: "";
+        background-color: $white-color;
+        height: 1px;
+        width: 250px;
+        opacity: 0.5;
+      }
+    }
+  }
+}

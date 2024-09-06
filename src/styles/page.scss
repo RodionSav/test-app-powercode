@@ -1,0 +1,123 @@
+@import '../styles/utils/typography';
+@import './utils/variables';
+
+.page {
+  position: relative;
+  font-family: "Gilroy", sans-serif;
+  background-color: $back-page-color;
+  color: $white-color;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  box-sizing: border-box;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 980px;
+    margin-top: 102px;
+
+    @include onPhone {
+      display: block;
+      margin: 0 16px;
+    }
+
+    @include onDesktop {
+      padding-bottom: 50px;
+    }
+  }
+
+  &__decoration {
+    position: absolute;
+    overflow: hidden;
+
+    &-first {
+      position: absolute;
+      z-index: -1;
+      width: 400px;
+      height: 400px;
+      top: -70px;
+      left: -30px;
+      background-color: $back-decoration-color;
+      transform: rotate(9.41deg);
+      border-radius: 50%;
+      filter: blur(50px);
+      opacity: 0.5;
+
+      @include onPhone {
+        display: none;
+      }
+    }
+
+    &-second {
+      position: absolute;
+      z-index: -1;
+      width: 400px;
+      height: 800px;
+      top: -170px;
+      right: 0;
+      background-color: $back-decoration-color;
+      border-bottom-left-radius: 50%;
+      filter: blur(50px);
+      opacity: 0.5;
+
+      @include onPhone {
+        display: none;
+      }
+    }
+
+    &-third {
+      position: absolute;
+      z-index: -1;
+      width: 312px;
+      height: 712px;
+      top: 200px;
+      background-color: $back-decoration-color;
+      transform: rotate(9.41deg);
+      border-radius: 50%;
+      filter: blur(50px);
+      opacity: 0.5;
+
+      clip-path: inset(-50px -50px -50px -50px);
+
+      @include onDesktop {
+        display: none;
+      }
+    }
+  }
+
+  &__item__paragraph {
+    position: relative;
+    z-index: 1000;
+    font-size: 12px;
+    color: $white-color;
+    line-height: 19.2px;
+    opacity: 0.8;
+
+    @include onPhone {
+      width: 162px;
+    }
+  }
+
+  &__title__background {
+    display: inline-block;
+    position: relative;
+    bottom: 0px;
+    z-index: 100;
+    font-weight: 800;
+    font-size: 128px;
+    line-height: 0.7;
+    border: 1.6px solid $decoration-text-color;
+    opacity: 0.05;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1.6px $white-color;
+    background-clip: text;
+    pointer-events: none;
+
+    @include onPhone {
+      display: none;
+    }
+  }
+}

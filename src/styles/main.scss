@@ -1,3 +1,109 @@
-body {
+@import "./utils/mixins";
+@import "./utils/typography";
+@import "./page.scss";
+@import "./webinar.scss";
+@import "./header.scss";
+@import "./form.scss";
+@import "./speaker.scss";
+@import "./registation.scss";
+@import "./logo.scss";
+
+* {
+  padding: 0;
   margin: 0;
+}
+
+/* Styles for the phone input container */
+.iti {
+  width: 100%; /* Make the input field take full width */
+}
+
+/* Style the phone input */
+.iti__input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ddd; /* Light border */
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.iti__input:focus {
+  border-color: #007bff; /* Blue border on focus */
+}
+
+/* Style the dropdown button */
+.iti__flag-container {
+  background: #f7f7f7; /* Light background for flag */
+  border-right: 2px solid #ddd;
+  border-radius: 8px 0 0 8px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Make sure the flags are well-aligned */
+.iti__flag {
+  width: 20px; /* Set a consistent flag size */
+  height: 15px;
+}
+
+/* Custom dropdown styles */
+.iti__country-list {
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+.iti__country {
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+.iti__country:hover {
+  background-color: #f0f0f0;
+}
+
+/* Change the appearance of the selected country */
+.iti__country.selected {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Style the selected flag */
+.iti__selected-flag {
+  padding-right: 15px;
+  padding-left: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Ensure the flag is displayed correctly in the dropdown */
+.iti__country .iti__flag {
+  margin-right: 10px;
+}
+
+/* Arrow down icon customization */
+.iti__arrow {
+  border-top: 5px solid #333; /* Custom arrow color */
+}
+
+/* Optional: Style error messages */
+input.iti__input.error {
+  border-color: red;
+}
+
+input.iti__input.error:focus {
+  border-color: darkred;
+}
+
+.iti__country-list {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
 }

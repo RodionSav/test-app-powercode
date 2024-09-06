@@ -1,0 +1,126 @@
+@import "../styles/utils/typography";
+@import "./utils/variables";
+
+.logo {
+  &__item {
+    position: relative;
+
+    &-container {
+      position: absolute;
+      right: 40px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(5, max-width);
+
+      @include onPhone {
+        display: none;
+      }
+
+      @media (max-width: 1410px) {
+        display: none;
+      }
+    }
+
+    &-first {
+      background-image: url(../images/css-image.png);
+      background-repeat: no-repeat;
+      width: 82px;
+      height: 90px;
+      grid-row: 2 / 3;
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: $css-item-dot;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        right: 0;
+      }
+    }
+
+    &-second {
+      background-image: url(../images/html5-image.png);
+      background-repeat: no-repeat;
+      width: 88px;
+      height: 96px;
+      grid-row: 1 / 2;
+      grid-column: 2 / 3;
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: $html-item-dot;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        right: -20px;
+        top: 20px;
+      }
+    }
+
+    &-third {
+      background-image: url(../images/sublime-image.png);
+      background-repeat: no-repeat;
+      width: 62px;
+      height: 62px;
+      grid-row: 4 / 5;
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: $sublime-item-dot;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        right: 0;
+        top: -10px;
+      }
+    }
+
+    &-fourth {
+      background-image: url(../images/javascript-image.png);
+      background-repeat: no-repeat;
+      width: 73px;
+      height: 80px;
+      grid-row: 3 / 4;
+      grid-column: 2 / 3;
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: $js-item-dot;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        right: -20px;
+        top: 20px;
+      }
+    }
+
+    &-fifth {
+      background-image: url(../images/visual-image.png);
+      background-repeat: no-repeat;
+      width: 75px;
+      height: 64px;
+      grid-row: 5 / 6;
+      grid-column: 2 / 3;
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: $vs-item-dot;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        bottom: -4px;
+        right: -14px;
+      }
+    }
+  }
+}
